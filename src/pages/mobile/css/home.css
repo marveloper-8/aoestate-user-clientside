@@ -1,0 +1,41 @@
+.home-mobile{
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    /* background:rgb(253, 167, 7); */
+    background:rgb(187, 182, 182, .8);
+    overflow-x:hidden;
+}
+
+.home-mobile .image-container{
+    width:100%;
+    position:relative;
+}
+.home-mobile .image-container .overlay{
+    background:rgba(0,0,0,.5);
+    display:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:100;
+}
+
+.home-mobile .image-container .caption{
+    position:absolute;
+    color:#fff;
+    padding:3vh 5vw;
+    top:30vh;
+    left:10vw;
+    width:80vw;
+    text-align:center;
+}
+
+.home-mobile .image-container .images{
+    /* background-image:url('../../../images/house.jpg') */
+    width:100vw;
+    height:50vh;
+}

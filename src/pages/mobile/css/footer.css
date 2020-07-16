@@ -1,0 +1,99 @@
+.footer-mobile{
+    margin:0;
+    background:none;
+    padding:0;
+}
+.footer-mobile .first{
+    background:rgb(182, 164, 60);
+    text-align:center;
+    padding:10vh 10vw;
+}
+.footer-mobile .first h1{
+    font-size:6vw;
+    text-align:left;
+}
+.footer-mobile .newsletter{
+    padding:.75vh 2vw;
+    background:#fff;
+    width:70vw;
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    border-radius:10px;
+    margin:5vh 0;
+}
+.footer-mobile .newsletter input{
+    background:none;
+    font-size:3vw;
+    padding:1vh 1vw;
+    border:none;
+    outline:none;
+}
+.footer-mobile .newsletter button{
+    background:rgb(123, 90, 7);
+    color:#fff;
+    font-size:3vw;
+    padding:2vh 2vw;
+    border:none;
+    outline:none;
+    border-radius:10px;
+}
+
+.footer-mobile .information{
+    margin-top:3vh;
+    font-size:3vw;
+    text-align:left;
+}
+
+
+
+.footer-mobile .second{
+    background:rgb(123, 90, 7);
+    color:#fff;
+    padding:10vh 10vw;
+}
+.footer-mobile .head{
+    font-size:5vw;
+    font-weight:bold;
+    margin-bottom:3vh;
+}
+.footer-mobile .head img{
+    width:4vw;
+    margin-right:1vw;
+}
+.footer-mobile .about{
+    padding-right:10vw;
+}
+.footer-mobile .about p{
+    font-size:3vw;
+}
+
+.footer-mobile .footer-content h4{
+    margin-bottom:1vh;
+    font-size:5vw;
+}
+.footer-mobile .footer-content{
+    font-size:3vw;
+    margin-bottom:4vh;
+}
+.footer-mobile .footer-content span{
+    display:block;
+    margin-bottom:.5vh;
+}
+
+.footer-mobile .link{
+    color:#fff;
+}
+.footer-mobile .logo{
+    width:15vw!important;
+}
+.footer-mobile .social-icon{
+    width:4vw;
+    margin-right:2vw;
+}
+
+.footer-mobile .credit{
+    background:#000;
+    text-align:left;
+    padding:2vh 10vw;
+    color:#fff;
+}

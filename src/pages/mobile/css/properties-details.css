@@ -1,0 +1,60 @@
+.mobile .properties-details-header{
+    background:#fff;
+    text-align:center;
+    padding:4vh 0;
+    margin-bottom:4vh;
+    background:#f5f5f5;
+}
+
+.mobile .properties-details-header .subhead{
+    color:#000;
+    font-size:3vw;
+}
+.mobile .properties-details-header .head{
+    font-size:5vw;
+    color:rgb(175, 126, 0);
+    font-weight:bold;
+}
+
+.mobile .properties-details-content{
+    text-align:center;
+    padding:5vh 10vw;
+}
+.mobile .properties-details-content .text{
+    padding:5vh 2vw;
+    text-align:left;
+}
+.mobile .properties-details-content .text h1{
+    font-size:4vw;
+    color:rgb(175, 126, 0);
+    font-weight:bold;
+    margin-bottom:5vh;
+}
+.mobile .properties-details-content .text p{
+    padding-bottom:3vh;
+}
+.mobile .properties-details-content .text button{
+    padding:1.5vh 3vw;
+    font-size:3vw;
+    border:none;
+    outline:none;
+    color:#fff;
+    border-radius:5px;
+    margin:0 .25vw;
+}
+.mobile .properties-details-content .text .brochure{
+    background:rgb(175, 126, 0);
+}
+.mobile .properties-details-content .text .flyers{
+    background:#000;
+}
+.mobile .properties-details-content .image-container{}
+.mobile .properties-details-content .image-container .images{
+    width:100%;
+    height:40vh;
+}
+
+.mobile .properties-details-content iframe{
+    width:100%;
+    height:50vh;
+}

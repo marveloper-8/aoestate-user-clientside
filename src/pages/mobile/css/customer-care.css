@@ -1,0 +1,78 @@
+.customer-care .mobile .content{
+    padding:5vh 10vw;
+    overflow-x:hidden;
+    background:#f5f5f5;
+}
+
+.customer-care .mobile .text{
+}
+.customer-care .mobile .text h1{
+    font-size:4vw;
+    font-weight:bold;
+    margin-bottom:4vh;
+}
+.customer-care .mobile .text .tab{
+    background:#fff;
+    padding:2vh 5vw;
+    margin-bottom:4vh;
+    border-radius:10px;
+    font-size:3vw;
+}
+.customer-care .mobile .text .tab label{
+    font-weight:bold;
+    font-size:3.5vw;
+    color:rgb(175, 126, 0);
+}
+.customer-care .mobile .text p{
+    margin:0;
+    padding:0;
+}
+
+
+
+
+.customer-care .mobile .content form{
+    box-shadow: 0 4px 8px 0 rgba(132, 132, 132, 0.2), 0 6px 20px 0 rgba(177, 177, 177, 0.19);
+    border-radius:10px;
+    padding:2vh 5vw;
+    background:#fff;
+    width:95%;
+}
+.customer-care .mobile .content form .tab{
+    margin-bottom:3vh;
+}
+.customer-care .mobile .content form label{
+    font-size:2.5vw;
+}
+.customer-care .mobile .content form input,
+.customer-care .mobile .content form textarea{
+    font-size:2.5vw;
+    width:100%;
+    background:rgb(255, 244, 217);
+    border:1px #dadada solid;
+    padding:1vh 1vw;
+    border-radius:5px;
+}
+.customer-care .mobile .content form textarea{
+    height:7.5vh;
+}
+.customer-care .mobile .content form button{
+    padding:1.5vh 3vw;
+    background:rgb(175, 126, 0);
+    color:#fff;
+    text-decoration:none;
+    outline:none;
+    border:none;
+    font-size:2.5vw;
+    transition:.5s ease-in-out;
+    border-radius:5px;
+}
+.customer-care .mobile .content form button:hover{
+    padding:2.25vh 1.25vw;
+    background:rgb(123, 90, 7);
+    /* border:6px rgba(0,0,0,.1) solid; */
+}
+
+.customer-care .mobile .content .specific{
+    color:#000;
+}

@@ -1,0 +1,98 @@
+/* properties list*/
+.properties-list-desktop{
+    padding:10vh 10vw;
+    text-align:center;
+}
+.properties-list-desktop .link{
+    text-decoration:none;
+    color:#fff;
+}
+.properties-list-desktop .properties-list-container{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+}
+.properties-list-desktop .search{
+    width:95%;
+    border-radius:50px;
+    background:rgb(255, 244, 217);
+    border:1px #dadada solid;
+    padding:1.5vh 2vw;
+    display:grid;
+    grid-template-columns:1fr 25fr;
+    margin:0 auto 10vh auto;
+}
+.properties-list-desktop .search .icons{
+    fill:rgb(5, 112, 128);
+    width:1vw;
+}
+.properties-list-desktop .search input{
+    border:none;
+    background:none;
+    outline:none;
+    color:#000;
+    width:100%;
+    font-size:1vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* properties item*/
+.properties-item-desktop{
+    text-align:center;
+    padding:0 2vw;
+    margin-bottom:5vh;
+}
+.properties-item-desktop .container{
+    box-shadow: 0 4px 8px 0 rgba(132, 132, 132, 0.2), 0 6px 20px 0 rgba(177, 177, 177, 0.19);
+    background:#fff;
+    border-radius:5px;
+    padding:0;
+    margin:0;
+    transition:.2s ease-in-out;
+    cursor:pointer;
+}
+
+.properties-item-desktop .container .location{
+    font-weight:bold;
+}
+.properties-item-desktop .container:hover{
+    margin-top:2vh;
+}
+.properties-item-desktop .container:hover h6,
+.properties-item-desktop .container:hover .location{
+    color:rgb(175, 126, 0);
+}
+
+.properties-item-desktop .container .image{
+    height:30vh;
+    border-radius:5px 5px 0 0;
+}
+.properties-item-desktop .container .text{
+    padding:5vh 2.5vw;
+    text-align:left;
+    font-size:.8vw;
+}
+.properties-item-desktop .container .text .open-property{
+    font-size:.85vw;
+    padding:.75vh 1vw;
+    background:rgb(175, 126, 0);
+    color:#fff;
+    border:none;
+    outline:none;
+    border-radius:5px;
+}

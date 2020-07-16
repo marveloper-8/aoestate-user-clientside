@@ -1,0 +1,53 @@
+.navigation-desktop{
+    position:absolute;
+    top:0;
+    left:0;
+    display:grid;
+    grid-template-columns:1fr 5fr 3fr;
+    padding:2vh 5vw;
+    z-index:100;
+    width:100%;
+    color:#fff;
+    background:rgba(255,255,255,.7);
+}
+
+.navigation-desktop .logo{
+    width:3vw;
+}
+.navigation-desktop .links{
+    font-size:.9vw;
+    text-align:left;
+    padding:3vh 0;
+    color:#000;
+    text-decoration:none;
+}
+.navigation-desktop .links span{
+    padding:1.5vh .75vw;
+    margin-left:1vw;
+}
+.navigation-desktop .link-items{
+    color:#000;
+    text-decoration:none;
+}
+
+.navigation-desktop .activity-buttons{
+    text-align:right;
+    padding-top:2vh;
+}
+.navigation-desktop .activity-buttons button{
+    padding:1.5vh .75vw;
+    margin-left:1vw;
+    font-size:.9vw;
+    border:none;
+    border-radius:5px;
+    color:#fff;
+}
+.navigation-desktop .activity-buttons .upload{
+    background:#000;
+}
+.navigation-desktop .activity-buttons .brokers{
+    background:rgb(123, 90, 7);
+}
+.navigation-desktop .activity-buttons .logout{
+    background:rgb(206, 19, 19);
+}
