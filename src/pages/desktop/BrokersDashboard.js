@@ -83,7 +83,7 @@ const BrokersDashboard = () => {
     console.log(userId)
     
     useEffect(() => {
-        fetch('https://aoestate-server.herokuapp.com/all-events', {
+        fetch('https://aoestate-server-two.herokuapp.com/all-events', {
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("jwt")
             }
@@ -95,7 +95,7 @@ const BrokersDashboard = () => {
     }, [])
     
     useEffect(() => {
-        fetch('https://aoestate-server.herokuapp.com/all-feeds', {
+        fetch('https://aoestate-server-two.herokuapp.com/all-feeds', {
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("jwt")
             }

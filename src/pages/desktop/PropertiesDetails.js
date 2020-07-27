@@ -44,7 +44,7 @@ const Estates = () => {
     console.log(propertyId)
 
     useEffect(() => {
-        fetch(`https://aoestate-server.herokuapp.com/properties-details/${propertyId}`, {
+        fetch(`https://aoestate-server-two.herokuapp.com/properties-details/${propertyId}`, {
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("jwt")
             }
@@ -57,7 +57,7 @@ const Estates = () => {
     }, [])
 
     const likePost = id => {
-        fetch('https://aoestate-server.herokuapp.com/like', {
+        fetch('https://aoestate-server-two.herokuapp.com/like', {
             method: "put",
             headers: {
                 "Content-Type": "application/json",
@@ -82,7 +82,7 @@ const Estates = () => {
     }
 
     const unlikePost = id => {
-        fetch('https://aoestate-server.herokuapp.com/unlike', {
+        fetch('https://aoestate-server-two.herokuapp.com/unlike', {
             method: "pull",
             headers: {
                 "Content-Type": "application/json",
@@ -107,7 +107,7 @@ const Estates = () => {
     }
 
     const displayName = (text, postId) => {
-        fetch('https://aoestate-server.herokuapp.com/comment', {
+        fetch('https://aoestate-server-two.herokuapp.com/comment', {
             method: "put",
             headers: {
                 "Content-Type": "application/json",
@@ -411,13 +411,6 @@ const Estates = () => {
                                 target="_blank" rel="noopener noreferrer"
                             >
                                 <button className="brochure">DOWNLOAD BROCHURE</button>
-                            </a>
-
-                            <a
-                                href={propertyDetails.post ? propertyDetails.post.flyers : "loading"} 
-                                target="_blank" rel="noopener noreferrer"
-                            >
-                                <button className="flyers">DOWNLOAD FLYERS</button>
                             </a>
                         </div>
                     </div>

@@ -2,8 +2,6 @@ import React from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 import addNotification from 'react-push-notification'
 
-import loginFour from '../../images/login4.png'
-import house from '../../images/house.jpg'
 import logoClient from '../../images/logo-client.png'
 import logoClientTwo from '../../images/logo-client-two.png'
 import about from '../../images/about.png'

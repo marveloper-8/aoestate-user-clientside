@@ -1,6 +1,7 @@
 import React, {useState, useContext, useEffect} from 'react'
 import {UserContext} from './../App'
 import {useParams} from 'react-router-dom'
+import TextTruncate from 'react-text-truncate'
 
 import './css/content.css'
 
@@ -21,7 +22,7 @@ const ContentProperties = () => {
     console.log(userId)
     
     useEffect(() => {
-        fetch('https://aoestate-server.herokuapp.com/all-post', {
+        fetch('https://aoestate-server-two.herokuapp.com/all-post', {
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("jwt")
             }
@@ -33,7 +34,7 @@ const ContentProperties = () => {
     }, [])
 
     const makeComment = (text,postId)=>{
-          fetch('https://aoestate-server.herokuapp.com/comment',{
+          fetch('https://aoestate-server-two.herokuapp.com/comment',{
               method:"put",
               headers:{
                   "Content-Type":"application/json",
@@ -90,7 +91,13 @@ const ContentProperties = () => {
                     
                                     <div className="text">
                                         <h6>{item.propertyName}</h6>
-                                        <p className="description">{item.propertyDescription}</p>
+                                        <TextTruncate
+                                            line={3}
+                                            element="span"
+                                            truncateText="…"
+                                            text={item.propertyDescription}
+                                        />
+                                        <p className="location">{item.propertyLocation}</p>
                                         <p className="location">{item.price}</p>
                                         <p>{item.comments.length} people interested</p>
                                         <button className="open-property">

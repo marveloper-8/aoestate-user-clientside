@@ -28,7 +28,7 @@ const PropertiesDetailsGeneral = () => {
     console.log(generalPropertyId)
 
     useEffect(() => {
-        fetch(`https://aoestate-server.herokuapp.com/general-properties-details/${generalPropertyId}`, {
+        fetch(`https://aoestate-server-two.herokuapp.com/general-properties-details/${generalPropertyId}`, {
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("jwt")
             }

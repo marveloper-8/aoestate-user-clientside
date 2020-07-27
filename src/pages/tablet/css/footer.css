@@ -1,0 +1,100 @@
+.footer-tablet{
+    margin:0;
+    background:none;
+    padding:0;
+}
+.footer-tablet .first{
+    background:rgb(182, 164, 60);
+    text-align:center;
+    padding:10vh 10vw;
+}
+.footer-tablet .first h1{
+    font-size:4vw;
+    text-align:left;
+}
+.footer-tablet .newsletter{
+    padding:.75vh 2vw;
+    background:#fff;
+    width:70vw;
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    border-radius:10px;
+    margin:5vh 0;
+}
+.footer-tablet .newsletter input{
+    background:none;
+    font-size:2vw;
+    padding:1vh 1vw;
+    border:none;
+    outline:none;
+}
+.footer-tablet .newsletter button{
+    background:rgb(123, 90, 7);
+    color:#fff;
+    font-size:2vw;
+    padding:2vh 2vw;
+    border:none;
+    outline:none;
+    border-radius:10px;
+}
+
+.footer-tablet .information{
+    margin-top:3vh;
+    font-size:2vw;
+    text-align:left;
+}
+
+
+
+.footer-tablet .second{
+    background:rgb(123, 90, 7);
+    color:#fff;
+    padding:10vh 10vw;
+}
+.footer-tablet .head{
+    font-size:4vw;
+    font-weight:bold;
+    margin-bottom:3vh;
+}
+.footer-tablet .head img{
+    width:4vw;
+    margin-right:1vw;
+}
+.footer-tablet .about{
+    padding:0 10vw 5vh 0;
+}
+.footer-tablet .about p{
+    font-size:2vw;
+}
+
+.footer-tablet .footer-content h4{
+    margin-bottom:1vh;
+    font-size:3vw;
+}
+.footer-tablet .footer-content{
+    font-size:2vw;
+    margin-bottom:4vh;
+}
+.footer-tablet .footer-content span{
+    display:block;
+    margin-bottom:.5vh;
+}
+
+.footer-tablet .link{
+    color:#fff;
+}
+.footer-tablet .logo{
+    width:15vw!important;
+}
+.footer-tablet .social-icon{
+    width:2vw;
+    margin-right:1vw;
+}
+
+.footer-tablet .credit{
+    background:#000;
+    text-align:left;
+    padding:2vh 10vw;
+    color:#fff;
+    font-size:2vw;
+}

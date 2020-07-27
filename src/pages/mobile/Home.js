@@ -1,10 +1,11 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel'
+import {Link} from 'react-router-dom'
 
-import login from '../../images/login.png'
-import loginFour from '../../images/login4.png'
-import house from '../../images/house.jpg'
 import logoClient from '../../images/logo-client.png'
+import logoClientTwo from '../../images/logo-client-two.png'
+import about from '../../images/about.png'
+import work from '../../images/work.png'
 
 import Navigation from './Navigation'
 import Footer from './Footer'
@@ -28,7 +29,7 @@ function Home() {
                     <div className="text">
                         <div className="image">
                             <img 
-                                src={login} 
+                                src={about} 
                                 alt="description" 
                             />
                         </div>
@@ -37,9 +38,11 @@ function Home() {
                         
                         <p>AOEstate Chariots is a platform that brings together some of the best real estate marketing professionals in Nigeria saddled with the key responsibility of delivering quality, document assigned, government friendly land and housing schemes throughout the nation.</p>
 
-                        <button>
-                            Learn more →
-                        </button>
+                        <Link className="link-items" to='/about'>
+                            <button>
+                                Learn more →
+                            </button>
+                        </Link>
                     </div>
                 </div>
 
@@ -50,7 +53,7 @@ function Home() {
                 <div className="content content-right">
                     <div className="image">
                         <img 
-                            src={loginFour} 
+                            src={work} 
                             alt="description" 
                         />
                     </div>
@@ -60,9 +63,11 @@ function Home() {
                         
                         <p>We are keen on delivering quality, properly documented properties to our esteemed clients and as such ensure the following quality control checks are put in place before signing up developers.</p>
 
-                        <button>
-                            Learn more →
-                        </button>
+                        <Link className="link-items" to='/how-we-work'>
+                            <button>
+                                Learn more →
+                            </button>
+                        </Link>
                     </div>
                 </div>
 
@@ -175,7 +180,7 @@ function Home() {
                                 alt="logo"
                             />
                             <img
-                                src={logoClient}
+                                src={logoClientTwo}
                                 className="logo"
                                 alt="logo"
                             />
@@ -189,7 +194,7 @@ function Home() {
                                 alt="logo"
                             />
                             <img
-                                src={logoClient}
+                                src={logoClientTwo}
                                 className="logo"
                                 alt="logo"
                             />
@@ -203,7 +208,7 @@ function Home() {
                                 alt="logo"
                             />
                             <img
-                                src={logoClient}
+                                src={logoClientTwo}
                                 className="logo"
                                 alt="logo"
                             />

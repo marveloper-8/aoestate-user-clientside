@@ -46,7 +46,7 @@ const BrokersDashboard = () => {
             alert("invalid email")
             return
         }
-        fetch("https://aoestate-server.herokuapp.com/signup", {
+        fetch("https://aoestate-server-two.herokuapp.com/signup", {
             method: "post",
             headers: {
                 "Content-Type": "application/json"

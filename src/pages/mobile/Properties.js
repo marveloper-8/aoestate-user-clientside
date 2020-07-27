@@ -1,6 +1,6 @@
 import React from 'react'
 
-import house from '../../images/house.jpg'
+import house from '../../images/house-four.jpg'
 
 import ContentPropertiesGeneral from './components/ContentPropertiesGeneral'
 

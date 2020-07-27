@@ -61,7 +61,7 @@ function About() {
                                 }}
                             ></div>
 
-                            <h3>James Doe</h3>
+                            <h3>Adetunbi H Owolabi</h3>
                             <div>Founder/CEO</div>
                         </div>
                         
@@ -75,8 +75,8 @@ function About() {
                                 }}
                             ></div>
 
-                            <h3>James Doe</h3>
-                            <div>Founder/CEO</div>
+                            <h3>Olawale Kuforiji</h3>
+                            <div>Chief Operating Officer</div>
                         </div>
                         
                         <div className="item">
@@ -89,8 +89,8 @@ function About() {
                                 }}
                             ></div>
 
-                            <h3>James Doe</h3>
-                            <div>Founder/CEO</div>
+                            <h3>Adejumo Eniola</h3>
+                            <div>Secretary</div>
                         </div>
                     </div>
                 </div>

@@ -352,7 +352,7 @@ const DevelopersHub = () => {
                             </div>
                             
                             <div className="tab">
-                                <label>Link to Google Drive Folder</label>. <i 
+                                <label>Upload Pictures, Flyers, and Brochures (Link to Google Drive Folder)</label>. <i 
                                     className="important-read"
                                     onClick={() => setInstructions(!instructions)}
                                 >Important read*</i>

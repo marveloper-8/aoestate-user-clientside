@@ -17,7 +17,7 @@ function Events() {
     console.log(eventId)
 
     useEffect(() => {
-        fetch(`https://aoestate-server.herokuapp.com/event-details/${eventId}`, {
+        fetch(`https://aoestate-server-two.herokuapp.com/event-details/${eventId}`, {
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("jwt")
             }

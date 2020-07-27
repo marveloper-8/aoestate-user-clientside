@@ -1,11 +1,10 @@
 import React, {useState, useContext, useEffect} from 'react'
 import {UserContext} from './../App'
 import {useParams} from 'react-router-dom'
-import Axios from 'axios'
+import TextTruncate from 'react-text-truncate'
 
 import './css/content.css'
 
-import house from '../../../images/house.jpg'
 import search from '../../../icons/search.svg'
 
 import {
@@ -21,7 +20,7 @@ const ContentProperties = () => {
     console.log(userId)
     
     useEffect(() => {
-        fetch('https://aoestate-server.herokuapp.com/all-property', {
+        fetch('https://aoestate-server-two.herokuapp.com/all-property', {
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("jwt")
             }
@@ -65,7 +64,12 @@ const ContentProperties = () => {
                     
                                     <div className="text">
                                         <h6>{item.propertyName}</h6>
-                                        <p className="description">{item.propertyDescription}</p>
+                                        <TextTruncate
+                                            line={3}
+                                            element="span"
+                                            truncateText="…"
+                                            text={item.propertyDescription}
+                                        />
                                         <p className="location">{item.propertyLocation}</p>
                                         <p className="location">{item.price}</p>
                                         <button className="open-property">

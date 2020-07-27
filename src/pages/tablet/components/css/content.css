@@ -1,0 +1,102 @@
+/* properties list*/
+.properties-list-tablet{
+    padding:10vh 10vw;
+    text-align:center;
+}
+.properties-list-tablet .link{
+    text-decoration:none;
+    color:#000;
+}
+.properties-list-tablet .properties-list-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+}
+.properties-list-tablet .search{
+    width:95%;
+    border-radius:50px;
+    background:rgb(255, 244, 217);
+    border:1px #dadada solid;
+    padding:1.5vh 2vw;
+    display:grid;
+    grid-template-columns:1fr 6fr;
+    margin:0 auto 5vh auto;
+}
+.properties-list-tablet .search .icons{
+    fill:rgb(5, 112, 128);
+    width:4vw;
+}
+.properties-list-tablet .search input{
+    border:none;
+    background:none;
+    outline:none;
+    color:#000;
+    width:100%;
+    font-size:3vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* properties item*/
+.properties-item-tablet{
+    text-align:center;
+    padding:0;
+    margin-bottom:5vh;
+}
+.properties-item-tablet .container{
+    box-shadow: 0 4px 8px 0 rgba(132, 132, 132, 0.2), 0 6px 20px 0 rgba(177, 177, 177, 0.19);
+    background:#fff;
+    border-radius:5px;
+    padding:0;
+    margin:0;
+    transition:.2s ease-in-out;
+    cursor:pointer;
+}
+
+.properties-item-tablet .container .location{
+    font-weight:bold;
+}
+.properties-item-tablet .container:hover{
+    margin-top:2vh;
+}
+.properties-item-tablet .container h6{
+    font-size:3vw;
+    font-weight:bold;
+    color:rgb(175, 126, 0);
+}
+
+.properties-item-tablet .container .image{
+    height:30vh;
+    border-radius:5px 5px 0 0;
+}
+.properties-item-tablet .container .text{
+    padding:3vh 3vw;
+    text-align:left;
+    font-size:2vw;
+}
+
+.properties-item-tablet .container button{
+    padding:1vh 2vw;
+    background:rgb(175, 126, 0);
+    color:#fff;
+    text-decoration:none;
+    outline:none;
+    border:none;
+    font-size:2vw;
+    transition:.5s ease-in-out;
+    border-radius:5px;
+}

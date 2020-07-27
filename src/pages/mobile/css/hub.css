@@ -24,6 +24,10 @@
 .developers-hub .mobile .upload-form label{
     font-size:3vw;
 }
+.developers-hub .mobile .upload-form .important-read{
+    color:#f00;
+    font-size:3vw;
+}
 .developers-hub .mobile .upload-form input,
 .developers-hub .mobile .upload-form textarea{
     font-size:3vw;

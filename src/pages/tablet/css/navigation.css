@@ -1,0 +1,101 @@
+.navigation-tablet{
+    position:relative;
+    top:0;
+    left:0;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    padding:2vh 7.5vw;
+    z-index:100;
+    color:#000;
+    background:#fff;
+}
+
+.navigation-tablet .logo img{
+    width:7.5vw;
+}
+.navigation-tablet .menu img{
+    width:3vw;
+}
+.navigation-tablet .menu{
+    text-align:right;
+    padding:3vh 2.5vw 0 0;
+}
+.navigation-tablet .menu-panel{
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    top:0;
+    left:100vw;
+    transition:1s ease-in-out;
+}
+.navigation-tablet .menu-panel .background{
+    background:rgba(0,0,0,.6);
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.navigation-tablet .menu-panel .inner{
+    background:#000;
+    position:absolute;
+    top:0;
+    right:0;
+    padding:5vh 10vw;
+    color:#fff;
+    height:100%;
+    width:70vw;
+}
+.navigation-tablet .menu-panel .close{
+    text-align:right;
+    color:#fff;
+    font-size:7.5vw;
+}
+.navigation-tablet .menu-toggled{
+    left:0;
+}
+.navigation-tablet .links{
+    font-size:2vw;
+    text-align:center;
+    padding:10vh 0 5vh 0;
+    text-decoration:none;
+}
+.navigation-tablet .links span{
+    padding:1.5vh .75vw;
+    text-align:center;
+    display:block;
+}
+.navigation-tablet .link-items{    
+    color:#fff;
+    text-decoration:none;
+}
+
+.navigation-tablet .activity-buttons{
+    text-align:center;
+    width:100%;
+    padding:0;
+    margin:0;
+}
+.navigation-tablet .activity-buttons button{
+    padding:1.5vh .75vw;
+    margin:auto;
+    font-size:2vw;
+    border:none;
+    border-radius:5px;
+    display:block;
+    width:40vw;
+    text-align:center;
+    margin-bottom:2vh;
+}
+.navigation-tablet .activity-buttons .upload{
+    background:#fff;
+    color:#000;
+}
+.navigation-tablet .activity-buttons .brokers{
+    background:rgb(123, 90, 7);
+    color:#fff;
+}
+.navigation-tablet .activity-buttons .logout{
+    background:rgb(206, 19, 19);
+    color:#fff;
+}

@@ -28,7 +28,7 @@ const PropertiesDetailsGeneral = () => {
     console.log(generalPropertyId)
 
     useEffect(() => {
-        fetch(`https://aoestate-server.herokuapp.com/general-properties-details/${generalPropertyId}`, {
+        fetch(`https://aoestate-server-two.herokuapp.com/general-properties-details/${generalPropertyId}`, {
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("jwt")
             }
@@ -201,13 +201,6 @@ const PropertiesDetailsGeneral = () => {
                                 target="_blank" rel="noopener noreferrer"
                             >
                                 <button className="brochure">DOWNLOAD BROCHURE</button>
-                            </a>
-
-                            <a
-                                href={generalPropertyDetails.property ? generalPropertyDetails.property.flyers : "loading"} 
-                                target="_blank" rel="noopener noreferrer"
-                            >
-                                <button className="flyers">DOWNLOAD FLYERS</button>
                             </a>
                         </div>
                     </div>

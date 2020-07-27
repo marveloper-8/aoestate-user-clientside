@@ -1,6 +1,29 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 import CountUp from 'react-countup'
+import axios from 'axios'
+
+import screenOne from '../../images/google-drive/screen1.png'
+import screenTwo from '../../images/google-drive/screen2.png'
+import screenThree from '../../images/google-drive/screen3.png'
+import screenFour from '../../images/google-drive/screen4.png'
+import screenFive from '../../images/google-drive/screen5.png'
+import screenSix from '../../images/google-drive/screen6.png'
+import screenSeven from '../../images/google-drive/screen7.png'
+import screenEight from '../../images/google-drive/screen8.png'
+import screenNine from '../../images/google-drive/screen9.png'
+import screenTen from '../../images/google-drive/screen10.png'
+import screenEleven from '../../images/google-drive/screen11.png'
+import screenTwelve from '../../images/google-drive/screen12.png'
+import screenThirteen from '../../images/google-drive/screen13.png'
+import screenFourteen from '../../images/google-drive/screen14.png'
+import screenFifteen from '../../images/google-drive/screen15.png'
+import screenSixteen from '../../images/google-drive/screen16.png'
+import screenSeventeen from '../../images/google-drive/screen17.png'
+import screenEighteen from '../../images/google-drive/screen18.png'
+import screenNineteen from '../../images/google-drive/screen19.png'
+import screenTwenty from '../../images/google-drive/screen20.png'
+import screenTwentyOne from '../../images/google-drive/screen21.png'
 
 import login from '../../images/login.png'
 import house from '../../images/house-three.jpg'
@@ -12,6 +35,78 @@ import Navigation from './Navigation'
 import Footer from './Footer'
 
 const DevelopersHub = () => {
+
+    // broker
+    const [uploadState, setUploadState] = useState({
+        category: '',
+        firstName: '',
+        lastName: '',
+        companyName: '',
+        email: '',
+        officeAddress: '',
+        propertyName: '',
+        propertyLocation: '',
+        youTube: '',
+        googleDrive: '',
+        price: '',
+        phone: '',
+        description: ''
+    })
+    
+
+    const handleUploadChange = (e) => {
+          setUploadState({ ...uploadState, [e.target.name]: e.target.value })
+    }
+
+    const handleUpload = (e) => {
+          e.preventDefault()
+          axios({
+                method: "POST",
+                url:"https://nodemailing.herokuapp.com/customer-care/uploads", 
+                data: {
+                    category: 'Developer', 
+                    firstName: uploadState.firstName,
+                    lastName: uploadState.lastName, 
+                    companyName: uploadState.companyName, 
+                    email: uploadState.email,
+                    officeAddress: uploadState.officeAddress, 
+                    propertyName: uploadState.propertyName, 
+                    propertyLocation: uploadState.propertyLocation, 
+                    youTube: uploadState.youTube, 
+                    googleDrive: uploadState.googleDrive, 
+                    price: uploadState.price, 
+                    phone: uploadState.phone,
+                    description: uploadState.description
+                }
+          }).then( () => {
+                setUploadState({ 
+                    category: 'Developer',
+                    firstName: '',
+                    lastName: '',
+                    companyName: '',
+                    email: '',
+                    officeAddress: '',
+                    propertyName: '',
+                    propertyLocation: '',
+                    youTube: '',
+                    googleDrive: '',
+                    price: '',
+                    phone: '',
+                    description: '' 
+                })
+              })
+                .then(
+                    alert("Message sent successfully")
+                )
+              .catch( err => {
+                    console.log(err)
+                })
+                
+    }
+
+
+    const [instructions, setInstructions] = useState(false)
+
     return (
         <div className="developers-hub">
             <div className="mobile">
@@ -126,13 +221,40 @@ const DevelopersHub = () => {
 
                     <h5>Upload a Products/Projects</h5>
 
-                    <form className="upload-form">
+                    <form className="upload-form" onSubmit={handleUpload}>
+                        <input 
+                            className="input"
+                            type="text"
+                            placeholder="Category..."
+                            name="category"
+                            value={uploadState.category}
+                            onChange={handleUploadChange}
+                            hidden
+                        />
+
                         <div className="tab">
-                            <label>Your Name</label>
+                            <label>First Name</label>
                             <br />
                             <input 
+                                className="input"
                                 type="text"
-                                placeholder="Your name..."
+                                placeholder="First name..."
+                                name="firstName"
+                                value={uploadState.firstName}
+                                onChange={handleUploadChange}
+                            />
+                        </div>
+                        
+                        <div className="tab">
+                            <label>Last Name</label>
+                            <br />
+                            <input 
+                                className="input"
+                                type="text"
+                                placeholder="Last name..."
+                                name="lastName"
+                                value={uploadState.lastName}
+                                onChange={handleUploadChange}
                             />
                         </div>
                         
@@ -140,8 +262,12 @@ const DevelopersHub = () => {
                             <label>Company Name</label>
                             <br />
                             <input 
+                                className="input"
                                 type="text"
                                 placeholder="Company name..."
+                                name="companyName"
+                                value={uploadState.companyName}
+                                onChange={handleUploadChange}
                             />
                         </div>
                         
@@ -149,8 +275,12 @@ const DevelopersHub = () => {
                             <label>Phone Number</label>
                             <br />
                             <input 
+                                className="input"
                                 type="tel" 
                                 placeholder="Phone number..."
+                                name="phone"
+                                value={uploadState.phone}
+                                onChange={handleUploadChange}
                             />
                         </div>
                         
@@ -158,8 +288,12 @@ const DevelopersHub = () => {
                             <label>Email Address</label>
                             <br />
                             <input 
+                                className="input"
                                 type="email" 
                                 placeholder="Email address..."
+                                name="email"
+                                value={uploadState.email}
+                                onChange={handleUploadChange}
                             />
                         </div>
                         
@@ -167,8 +301,12 @@ const DevelopersHub = () => {
                             <label>Office Address</label>
                             <br />
                             <input 
+                                className="input"
                                 type="text"
                                 placeholder="Office Address..."
+                                name="officeAddress"
+                                value={uploadState.officeAddress}
+                                onChange={handleUploadChange}
                             />
                         </div>
                         
@@ -176,8 +314,12 @@ const DevelopersHub = () => {
                             <label>Property Name</label>
                             <br />
                             <input 
+                                className="input"
                                 type="text"
                                 placeholder="Property name..."
+                                name="propertyName"
+                                value={uploadState.propertyName}
+                                onChange={handleUploadChange}
                             />
                         </div>
                         
@@ -185,17 +327,54 @@ const DevelopersHub = () => {
                             <label>Property Location</label>
                             <br />
                             <input 
+                                className="input"
                                 type="text"
                                 placeholder="Property location..."
+                                name="propertyLocation"
+                                value={uploadState.propertyLocation}
+                                onChange={handleUploadChange}
                             />
                         </div>
                         
                         <div className="tab">
-                            <label>Type Of Document</label>
+                            <label>Link to YouTube video</label>
                             <br />
                             <input 
+                                className="input"
                                 type="text"
-                                placeholder="Type of document..."
+                                placeholder="Link to YouTube video..."
+                                name="youTube"
+                                value={uploadState.youTube}
+                                onChange={handleUploadChange}
+                            />
+                        </div>
+                        
+                        <div className="tab">
+                            <label>Upload Pictures, Flyers, and Brochures (Link to Google Drive Folder)</label>. <i 
+                                className="important-read"
+                                onClick={() => setInstructions(!instructions)}
+                            >Important read*</i>
+                            <br />
+                            <input 
+                                className="input"
+                                type="text"
+                                placeholder="Link to Google Drive Folder..."
+                                name="googleDrive"
+                                value={uploadState.googleDrive}
+                                onChange={handleUploadChange}
+                            />
+                        </div>
+                        
+                        <div className="tab">
+                            <label>Price of Property</label>
+                            <br />
+                            <input 
+                                className="input"
+                                type="text"
+                                placeholder="Price of Property..."
+                                name="price"
+                                value={uploadState.price}
+                                onChange={handleUploadChange}
                             />
                         </div>
                         
@@ -203,7 +382,11 @@ const DevelopersHub = () => {
                             <label>Property Description</label>
                             <br />
                             <textarea
+                                className="input"
                                 placeholder="Property description..."
+                                name="description"
+                                value={uploadState.description}
+                                onChange={handleUploadChange}
                             ></textarea>
                         </div>
 
@@ -216,6 +399,104 @@ const DevelopersHub = () => {
                 
                 </div>
 
+
+                <div className={instructions ? "instructions-toggle instructions" : "instructions"}>
+                        <div className="inner">
+                            <div className="top-fade">
+                                <div className="close">
+                                    <span onClick={() => setInstructions(!instructions)}>
+                                        &times;
+                                    </span>
+                                </div>
+                            </div>
+                            <div className="inner-inner">
+                                <div className="head">Uploading your resources to a Google Drive</div>
+                                
+                                <ol>
+                                    <li>
+                                        <div className="text">Go to your Google Drive. You must have a Google account to access your Google Drive. <a href="https://drive.google.com/drive/my-drive" target="_blank" rel="noopener noreferrer">Click here to go to Google Drive.</a></div>
+                                        <img src={screenOne} alt="Screen One" />
+                                    </li>
+                                    
+                                    <li>
+                                        <div className="text">Create a folder.</div>
+                                        <img src={screenFive} alt="Screen Five" />
+                                        <img src={screenTwo} alt="Screen Two" />
+                                    </li>
+                                    
+                                    <li>
+                                        <div className="text">Use the name of the property as the name of the folder.</div>
+                                        <img src={screenThree} alt="Screen Three" />
+                                        <img src={screenFour} alt="Screen Four" />
+                                    </li>
+                                    
+                                    <li>
+                                        <div className="text">Open the folder.</div>
+                                        <img src={screenSix} alt="Screen Six" />
+                                    </li>
+                                    
+                                    <li>
+                                        <div className="text">Select the logo of your company first.</div>
+                                        <img src={screenSeven} alt="Screen Seven" />
+                                        <img src={screenEight} alt="Screen Eight" />
+                                        <img src={screenNine} alt="Screen Nine" />
+                                    </li>
+                                    
+                                    <li>
+                                        <div className="text">Also upload the brochure of the property.</div>
+                                        <img src={screenTwelve} alt="Screen Twelve" />
+                                    </li>
+                                    
+                                    <li>
+                                        <div className="text">Create a folder in the project folder and name it "Property Images". Afterwards upload the images of the property on this folder (Six folders at least).</div>
+                                        <img src={screenTen} alt="Screen Ten" />
+                                    </li>
+                                    
+                                    <li>
+                                        <div className="text">Create a folder in the project folder and name it "Property Flyers". Afterwards upload the flyer(s) of the property to this folder.</div>
+                                        <img src={screenEleven} alt="Screen Eleven" />
+                                    </li>
+                                    
+                                    <li>
+                                        <div className="text">The folder should now look like this. If it does not, please go back and follow the steps correctly</div>
+                                        <img src={screenThirteen} alt="Screen Thirteen" />
+                                    </li>
+                                    
+                                    <li>
+                                        <div className="text">Navigate back to "My Drive" where your project folder is clearly seen.</div>
+                                        <img src={screenFourteen} alt="Screen Fourteen" />
+                                    </li>
+                                    
+                                    <li>
+                                        <div className="text">Right click on the project folder then navigate to "Get shareable link".</div>
+                                        <img src={screenFifteen} alt="Screen Fifteen" />
+                                    </li>
+                                    
+                                    <li>
+                                        <div className="text">Change the access type from "Restricted" to "Anyone with the link".</div>
+                                        <img src={screenSixteen} alt="Screen Sixteen" />
+                                        <img src={screenSeventeen} alt="Screen Seventeen" />
+                                    </li>
+                                    
+                                    <li>
+                                        <div className="text">Copy the link to the folder and click on "Done" afterwards.</div>
+                                        <img src={screenEighteen} alt="Screen Eighteen" />
+                                        <img src={screenNineteen} alt="Screen Nineteen" />
+                                    </li>
+                                    
+                                    <li>
+                                        <div className="text">Paste the link on the input field for Google Drive URL and proceed with filling your form.</div>
+                                        <img src={screenTwenty} alt="Screen Twenty" />
+                                        <img src={screenTwentyOne} alt="Screen Twenty One" />
+                                    </li>
+                                </ol>
+                            </div>
+                            
+                            <div className="bottom-fade"></div>
+                        </div>
+                    </div>
+
+                    
                 <Footer />
             </div>
         </div>

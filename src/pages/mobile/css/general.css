@@ -119,7 +119,7 @@
 .mobile .testimonial .caption{
     padding:5vh 10vw;
     color:#000;
-    font-size:4vw;
+    font-size:3vw;
 }
 .mobile .testimonial .caption .avatar{
     width:50vw;
@@ -131,7 +131,7 @@
 .mobile .testimonial .caption h4{
     margin:3vh 0 2vh 0;
     color:#000;
-    font-size:7vw;
+    font-size:5vw;
     font-weight:bold;
 }
 
@@ -273,4 +273,108 @@
     border:none;
     transition:.5s ease-in-out;
     border-radius:5px;
+}
+
+
+
+
+
+
+
+
+.mobile .instructions{
+    left:100vw;
+    transition:1s ease-in-out all;
+    position:fixed;
+    top:0;
+}
+.mobile .instructions-toggle{
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:400;
+    display:block;
+    text-align:center;
+    transition:1s ease-in-out all;
+}
+.mobile .instructions-toggle .background{
+    background:rgba(0,0,0,.8);
+    width:100vw;
+    height:100vh;
+    transition:1s ease-in-out all;
+}
+.mobile .instructions-toggle .inner{
+    background:#fff;
+    height:100vh;
+    position:absolute;
+    top:0;
+    width:100vw;
+    box-shadow: 0 4px 8px 0 rgba(132, 132, 132, 0.2), 0 6px 20px 0 rgba(177, 177, 177, 0.19);
+    right:0;
+    padding:5vh 2.5vw;
+    text-align:left;
+}
+.mobile .instructions-toggle .inner-inner{
+    width:100%;
+    height:100%;
+    overflow-y:scroll;
+    padding:5vw 5vh;
+}
+.mobile .instructions-toggle .top-fade{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:10vh;
+    border-radius:15px 15px 0 0;
+    background: linear-gradient(to top, #fff 0%, rgba(0,0,0,0) 100%);
+}
+.mobile .instructions-toggle .top-fade .close{
+    text-align:left!important;
+    padding:3vh 3vw!important;
+}
+.mobile .instructions-toggle .bottom-fade{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:10vh;
+    border-radius:0 0 15px 15px;
+    background: linear-gradient(to top, #fff 0%, rgba(0,0,0,0) 100%);
+}
+
+.mobile .instructions-toggle .head{
+    color:rgb(175, 126, 0);
+    font-weight:bold;
+    margin:5vh 0 3vh 0;
+    font-size:5vw;
+}
+.mobile .instructions-toggle ol{
+    font-size:3vw;
+}
+.mobile .instructions-toggle ol li{
+    margin-bottom:6vh;
+}
+.mobile .instructions-toggle ol .text{
+    margin-bottom:2vh;
+}
+.mobile .instructions-toggle ol img{
+    width:100%;
+    -webkit-transition: all .5s ease-in;
+    -moz-transition: all .5s ease-in;
+    -ms-transition: all .5s ease-in;
+    -o-transition: all .5s ease-in;
+    transition: all .5s ease-in;
+}
+.mobile .instructions-toggle ol img:hover{
+    color: #424242;
+    opacity: 1;
+    transform: scale(.7);
+    -ms-transform: scale(.7); /* IE 9 */
+    -webkit-transform: scale(.7); /* Safari and Chrome */
+    position:fixed;
+    top:0;
+    left:0;
 }
