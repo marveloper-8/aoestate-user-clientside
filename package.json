@@ -12,7 +12,7 @@
     "cors": "^2.8.5",
     "google-form": "^1.0.2",
     "node-pushnotifications": "^1.4.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "nodemailer": "^6.4.8",
     "push.js": "^1.0.12",
     "query-string": "^6.13.1",
